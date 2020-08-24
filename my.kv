@@ -1,0 +1,684 @@
+#coding=utf-8
+
+<MyGrid>
+
+    ans1: ans1
+    ans2: ans2
+    ans3: ans3
+    ans4: ans4
+    inst: inst
+#    rev : rev
+    spi1: spi1
+    spi2: spi2
+    spi3: spi3
+    spi4: spi4
+    spi5: spi5
+    spi6: spi6
+    spi7: spi7
+    spi8: spi8
+    chapstart: chapstart
+    chapend: chapend
+    lookfor: lookfor
+
+    FloatLayout:
+        size: root.width-20, root.height-20
+        pos: 10,10
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.2, 0.9
+
+        Image:
+            color: 1,1,1,1
+            source: "cross.jpg"
+            pos_hint :{'center_x':0.5, 'center_y':0.5}
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1,1
+
+
+    GridLayout:
+
+        cols: 8
+        size: root.width-20, root.height-20
+        pos: 10,10
+
+        Spinner:
+            pos:
+            id : spi1
+            text: app.spi1
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','创世记', '出埃及记', '利未记', '民数记','申命记')
+
+        Spinner:
+            pos:
+            id : spi2
+            text: app.spi2
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','约书亚记','士师记','路得记','撒母耳记上', '撒母耳记下', '列王记上','列王记下','历代志上','历代志下','以斯拉记','尼希米记','以斯帖记')
+
+        Spinner:
+            pos:
+            id : spi3
+            text: app.spi3
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','约伯记','诗篇','箴言','传道书','雅歌')
+
+        Spinner:
+            pos:
+            id : spi4
+            text: app.spi4
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','以赛亚书','耶利米书','耶利米哀歌','以西结书','但以理书')
+        Spinner:
+            pos:
+            id : spi5
+            text: app.spi5
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','何西阿书','约珥书','阿摩司书','俄巴底亚书','约拿书','弥迦书','那鸿书','哈巴谷书','西番亚书','哈该书', '撒迦利亚书','玛拉基书')
+
+        Spinner:
+            pos:
+            id : spi6
+            text: app.spi6
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','马太福音','马可福音','路加福音','约翰福音','使徒行传')
+        Spinner:
+            pos:
+            id : spi7
+            text: app.spi7
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','罗马书','哥林多前书','哥林多后书','加拉太书','以弗所书','腓立比书','歌罗西书','帖撒罗尼迦前书', '帖撒罗尼迦后书','提摩太前书','提摩太后书','提多书','腓利门书')
+
+        Spinner:
+            pos:
+            id : spi8
+            text: app.spi8
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 14
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','希伯来书','雅各书','彼得前书','彼得后书','约翰一书','约翰二书','约翰三书','犹大书','启示录')
+
+        Label:
+
+
+    GridLayout:
+        cols: 1
+        size: root.width-20, root.height-20
+        pos: 10,10
+
+        Label:
+            size_hint: 0.05,0.1
+
+        Label:
+            text: app.qverse
+            size: self.texture_size
+            text_size: root.width, 350
+            padding: 10,10
+            font_size: 20
+            font_name: 'DroidSansFallback.ttf'
+            valign: 'middle'
+            halign: 'center'
+            outline_color: (0.7, 0.0, 0.9)
+            outline_width: 4
+            strip_reflow: True
+
+
+        Label:
+            id: inst
+            text: app.inst
+            size_hint: 0.1, 0.3
+            text_size: root.width, 44
+            padding: 1,1
+            outline_color: (0.0, 0.0, 0.9)
+            outline_width: 2
+            font_size: 20
+            font_name: 'DroidSansFallback.ttf'
+            valign: 'middle'
+            halign: 'center'
+            size: self.texture_size
+
+        GridLayout:
+            size_hint: 0.5, 0.2
+            cols: 8
+
+
+            TextInput:
+                id: chapstart
+                text: app.chapstart
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,9,0,0
+                size_hint: 0.1, 0.29
+                font_size: 14
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1.0, 0.3, 0.3, 0.3
+                hint_text: "从第几章？"
+                strip_reflow: True
+
+            TextInput:
+                id: chapend
+                text: app.chapend
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,9,0,0
+                size_hint: 0.1, 0.29
+                font_size: 14
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1.0, 0.3, 0.3, 0.3
+                hint_text: "到第几章？"
+
+
+            Button:
+                id: ans1
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0, 0.8, 0)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc1()
+            Button:
+                id: ans2
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0, 0.8, 0)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc2()
+            Button:
+                id: ans3
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0, 0.8, 0)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc3()
+            Button:
+                id: ans4
+                font_size: 20
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0, 0.8, 0)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc4()
+
+            Label:
+                text: "<--答案栏"
+                font_size: 14
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                size: 20, 400
+                padding: 200,200
+                outline_color: (0.0, 0.0, 0.9)
+                outline_width: 2
+
+            TextInput:
+                id: lookfor
+                text: app.lookfor
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,10,0,0
+                size_hint: 0.1, 0.29
+                font_size: 14
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1.0, 0.3, 0.3, 0.3
+                hint_text: "指定字节？"
+#                opacity: 0.1
+
+
+
+
+
+
+        GridLayout:
+            cols:10
+            Button:
+                text: app.btn1
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn1()
+
+            Button:
+                text: app.btn2
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn2()
+            Button:
+                text: app.btn3
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn3()
+            Button:
+                text: app.btn4
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn4()
+            Button:
+                text: app.btn5
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn5()
+            Button:
+                text: app.btn6
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn6()
+            Button:
+                text: app.btn7
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn7()
+            Button:
+                text: app.btn8
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn8()
+            Button:
+                text: app.btn9
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn9()
+            Button:
+                text: app.btn10
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn10()
+
+            Button:
+                text: app.btn11
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn11()
+            Button:
+                text: app.btn12
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn12()
+            Button:
+                text: app.btn13
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn13()
+            Button:
+                text: app.btn14
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn14()
+            Button:
+                text: app.btn15
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn15()
+            Button:
+                text: app.btn16
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn16()
+            Button:
+                text: app.btn17
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn17()
+            Button:
+                text: app.btn18
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn18()
+            Button:
+                text: app.btn19
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn19()
+            Button:
+                text: app.btn20
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn20()
+
+            Button:
+                text: app.btn21
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn21()
+            Button:
+                text: app.btn22
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn22()
+            Button:
+                text: app.btn23
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn23()
+            Button:
+                text: app.btn24
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn24()
+            Button:
+                text: app.btn25
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn25()
+            Button:
+                text: app.btn26
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn26()
+            Button:
+                text: app.btn27
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn27()
+            Button:
+                text: app.btn28
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn28()
+            Button:
+                text: app.btn29
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn29()
+            Button:
+                text: app.btn30
+                background_color: 0.0, 0.1, 0.5, 0.3
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn30()
+
+            Button:
+                text: app.btn31
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn31()
+            Button:
+                text: app.btn32
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn32()
+            Button:
+                text: app.btn33
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn33()
+            Button:
+                text: app.btn34
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn34()
+            Button:
+                text: app.btn35
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn35()
+            Button:
+                text: app.btn36
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn36()
+            Button:
+                text: app.btn37
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn37()
+            Button:
+                text: app.btn38
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn38()
+            Button:
+                text: app.btn39
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn39()
+            Button:
+                text: app.btn40
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                font_size: 20
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn40()
+
+        GridLayout:
+            cols: 3
+            size: root.width-20, root.height-20
+            size_hint: 0.1, 0.3
+            pos: 10,10
+
+            Button:
+                id: restart
+                text:app.restart
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.5, 0.8
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_release: root.restart()
+
+            Button:
+                id: rev
+                text:app.rev
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.5, 0.8
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_press: root.rev()
+
+            Button:
+                id: submit
+                text:app.submit
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.5, 0.8
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_press: root.submit()
+
+
+
+
+#            canvas.before:
+#                Rectangle
+#                    source: "cross.jpg"
+#                    size: self.texture_size
+
+
